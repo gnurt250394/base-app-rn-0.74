@@ -2,8 +2,18 @@
  * @format
  */
 
-import {AppRegistry} from 'react-native';
-import App from './App';
-import {name as appName} from './app.json';
+import {registerRootComponent} from 'expo';
+import './declare';
+import 'react-native-gesture-handler';
+import {TextInput, Text} from 'react-native';
+import App from './src/App';
+Text.defaultProps = Text.defaultProps || {
+  allowFontScaling: false,
+};
 
-AppRegistry.registerComponent(appName, () => App);
+TextInput.defaultProps = TextInput.defaultProps || {
+  allowFontScaling: false,
+  autoCorrect: false,
+  spellCheck: false,
+};
+registerRootComponent(App);
