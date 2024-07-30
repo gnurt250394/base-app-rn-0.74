@@ -19,73 +19,73 @@
         "./env-config.ts"
       ],
       "@assets/*": [
-        "./src/app/assets/*"
+        "./src/assets/*"
       ],
       "@common/*": [
-        "./src/app/common/*"
+        "./src/common/*"
       ],
       "@app-emitter": [
-        "./src/app/common/emitter/index"
+        "./src/common/emitter/index"
       ],
       "@app-firebase": [
-        "./src/app/common/firebase/index"
+        "./src/common/firebase/index"
       ],
       "@hooks": [
-        "./src/app/common/hooks/index"
+        "./src/common/hooks/index"
       ],
       "@validate/*": [
-        "./src/app/common/zod-validate/*"
+        "./src/common/zod-validate/*"
       ],
       "@listener": [
-        "./src/app/common/redux/listener.ts"
+        "./src/common/redux/listener.ts"
       ],
       "@animated": [
-        "./src/app/common/animated/index"
+        "./src/common/animated/index"
       ],
       "@screens/*": [
-        "src/app/screens/*"
+        "src/screens/*"
       ],
       "@rn-core": [
-        "src/app/components/core/index"
+        "src/components/core/index"
       ],
       "@components/*": [
-        "./src/app/components/*"
+        "./src/components/*"
       ],
       "@utils/*": [
-        "./src/app/utils/*"
+        "./src/utils/*"
       ],
       "@storage": [
-        "./src/app/assets/storage/index"
+        "./src/assets/storage/index"
       ],
       "@network": [
-        "./src/app/network/index"
+        "./src/network/index"
       ],
       "@networking/*": [
-        "./src/app/network/*"
+        "./src/network/*"
       ],
       "@model/*": [
-        "./src/app/model/*"
+        "./src/model/*"
       ],
       "@navigation/*": [
-        "./src/app/navigation/*"
+        "./src/navigation/*"
       ],
       "@store/*": [
-        "./src/app/redux/store/*"
+        "./src/redux/store/*"
       ],
       "@redux-slice": [
-        "./src/app/redux/action-slice/index"
+        "./src/redux/action-slice/index"
       ],
       "@redux-selector/*": [
-        "./src/app/redux/selector/*"
+        "./src/redux/selector/*"
       ],
       "@redux-action-type/*": [
-        "./src/app/redux/action-type/*"
+        "./src/redux/action-type/*"
       ],
       "@theme": [
-        "./src/app/assets/themes/index"
+        "./src/assets/themes/index"
       ],
       "@theme/*": [
-        "./src/app/assets/themes/*"
+        "./src/assets/themes/*"
       ],
       "*": [
         "declare/*",
