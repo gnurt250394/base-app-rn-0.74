@@ -1,7 +1,7 @@
 import React from 'react';
 import {Image, ImageStyle} from 'react-native';
 
-import {images} from '@assets/image';
+import {images} from '@assets/images';
 import {View} from '@rn-core';
 
 import {styles} from './styles';
