@@ -50,7 +50,7 @@
     "react-i18next": "^15.0.0",
     "react-native": "0.74.3",
     "react-native-animateable-text": "^0.12.1",
-    "react-native-bootsplash": "^6.0.0",
+    "react-native-bootsplash": "5.4.1",
     "react-native-gesture-handler": "~2.16.1",
     "react-native-keyboard-controller": "^1.12.7",
     "react-native-keys": "^0.7.10",
