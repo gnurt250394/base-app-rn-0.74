@@ -1,8 +1,8 @@
 import React from 'react';
 import {TouchableWithoutFeedbackProps} from 'react-native';
 
-import {IconTypes} from '@assets/icon';
 import {I18nKeys} from '@assets/i18n/locales';
+import {ImagesTypes} from '@assets/images';
 
 export type ButtonProps = RequireAtLeastOne<
   {
@@ -21,12 +21,12 @@ export type ButtonProps = RequireAtLeastOne<
     /**
      * Left Icon
      */
-    leftIcon?: IconTypes;
+    leftIcon?: ImagesTypes;
 
     /**
      * Right Icon
      */
-    rightIcon?: IconTypes;
+    rightIcon?: ImagesTypes;
 
     /**
      * Disable button when press

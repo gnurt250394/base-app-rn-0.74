@@ -54,7 +54,8 @@ const template = `/**
 const {0} = {
 {1}
 };
-export default {0};\n`;
+export default {0};\n
+export type {3}Types = keyof typeof {0};`;
 
 const moduleName = argv.name || getFileName(outputName);
 console.log('moduleName', moduleName);
@@ -76,14 +77,19 @@ fs.readdir(folder, (err, files) => {
         strCodes.push("  {0}: '{2}',".format(fileName, requirePath, file));
       } else {
         strCodes.push(
-          "  {0}: require('{1}/{2}'),".format(fileName, requirePath, file),
+          "  {0}: require('@{1}/{2}'),".format(fileName, requirePath, file),
         );
       }
       // console.log(strCode)
     }
   });
   // $FlowFixMe
-  const code = template.format(moduleName, strCodes.join('\n'), author);
+  const code = template.format(
+    moduleName,
+    strCodes.join('\n'),
+    author,
+    moduleName?.charAt(0).toUpperCase() + moduleName?.slice(1),
+  );
   console.log(code);
   fs.writeFileSync(output, code);
 });

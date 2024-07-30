@@ -1,5 +1,5 @@
-import { IconTypes } from '@assets/icon';
-import { Colors } from '@theme';
+import {Colors} from '@theme';
+import {ImagesTypes} from '@assets/images';
 
 export interface IconProps {
   /**
@@ -17,5 +17,5 @@ export interface IconProps {
    * Icon type
    * @default undefined
    */
-  icon: IconTypes;
+  icon: ImagesTypes;
 }

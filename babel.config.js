@@ -38,6 +38,7 @@ module.exports = function (api) {
             '@redux-selector': './src/redux/selector',
             '@redux-action-type': './src/redux/action-type',
             '@theme': './src/assets/themes',
+            '@images': './src/assets/images',
           },
         },
       ],

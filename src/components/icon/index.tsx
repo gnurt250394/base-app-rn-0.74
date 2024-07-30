@@ -1,12 +1,12 @@
-import React, { forwardRef, useMemo } from 'react';
-import { Image, ImageProps, ImageStyle } from 'react-native';
+import React, {forwardRef, useMemo} from 'react';
+import {Image, ImageProps, ImageStyle} from 'react-native';
 
-import Animated, { AnimatedProps } from 'react-native-reanimated';
+import Animated, {AnimatedProps} from 'react-native-reanimated';
 
-import { icons } from '@assets/icon';
-import { useStyles } from '@theme';
+import {useStyles} from '@theme';
 
-import { IconProps } from './type';
+import {IconProps} from './type';
+import images from '@assets/images';
 
 const AnimatedImage = Animated.createAnimatedComponent(Image);
 
@@ -19,11 +19,11 @@ export const Icon = ({
   resizeMode = 'contain',
 }: IconProps & Pick<ImageProps, 'resizeMode'>) => {
   // state
-  const { theme } = useStyles();
+  const {theme} = useStyles();
 
   // style
   const style = useMemo<ImageStyle>(
-    () => ({ width: size, height: size }),
+    () => ({width: size, height: size}),
     [size],
   );
 
@@ -37,7 +37,7 @@ export const Icon = ({
           : undefined
       }
       resizeMode={resizeMode}
-      source={icons[icon]}
+      source={images[icon]}
     />
   );
 };
@@ -57,11 +57,11 @@ export const AnimatedIcon = forwardRef<
     ref,
   ) => {
     // state
-    const { theme } = useStyles();
+    const {theme} = useStyles();
 
     // style
     const style = useMemo<ImageStyle>(
-      () => ({ width: size, height: size }),
+      () => ({width: size, height: size}),
       [size],
     );
 
@@ -76,7 +76,7 @@ export const AnimatedIcon = forwardRef<
             : undefined
         }
         resizeMode={resizeMode}
-        source={icons[icon]}
+        source={images[icon]}
         {...rest}
       />
     );
