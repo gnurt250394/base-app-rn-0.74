@@ -1,8 +1,7 @@
-/* eslint-disable @typescript-eslint/no-explicit-any */
-import { SLICE_NAME } from '@common/constant';
-import { AuthenticationState } from '@model/authentication';
+import {SLICE_NAME} from '@common/constant';
+import {AuthenticationState} from '@model/authentication';
 import * as Action from '@redux-action-type/authentication';
-import { createAction, createSlice } from '@reduxjs/toolkit';
+import {createAction, createSlice} from '@reduxjs/toolkit';
 
 const initialState: AuthenticationState = {
   loading: false,
@@ -27,6 +26,6 @@ const login = createAction(
   }),
 );
 
-export const authenticationActions = { ...authenticationSlice.actions, login };
+export const authenticationActions = {...authenticationSlice.actions, login};
 
 export const authenticationReducer = authenticationSlice.reducer;

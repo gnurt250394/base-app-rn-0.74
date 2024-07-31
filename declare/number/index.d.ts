@@ -22,5 +22,8 @@ declare global {
      * Convert number to 1K, 1M, 1G, ... if
      */
     toStringKMG(digits?: number): string;
+
+    formatPrice(): string;
+
   }
 }

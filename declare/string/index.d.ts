@@ -8,11 +8,6 @@ declare global {
     capitalize(): string;
 
     /**
-     * Convert all UTF-8 to ASCII lowercase.
-     */
-    changeAlias(): string;
-
-    /**
      * Remove html tag from string
      */
     removeHtmlTag(): string;
@@ -56,5 +51,23 @@ declare global {
      * Create random string ID
      */
     randomUniqueId(): string;
+
+    formatPrice(): string;
+    isEmail(): boolean;
+    isPhoneNumber(): boolean;
+    isUrl(): boolean;
+
+    /**
+     * Convert all UTF-8 to ASCII lowercase.
+     */
+    unsignText(): string;
+    regexSearchText(): string;
+    removeWhiteSpace(): string;
+    createUniqueText(): string;
+    toHHMMSS(): string;
+    toMMSS(): string;
+    replaceAll(oldText: string, newText: string): string;
+    toNumber(): number;
+    isSvg(): boolean;
   }
 }

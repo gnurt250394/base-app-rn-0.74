@@ -1,5 +1,5 @@
-import React, { Component, useEffect } from 'react';
-import { useWindowDimensions } from 'react-native';
+import React, {Component, useEffect} from 'react';
+import {useWindowDimensions} from 'react-native';
 
 import {
   AnimationCallback,
@@ -18,9 +18,9 @@ import {
   withTiming,
   WithTimingConfig,
 } from 'react-native-reanimated';
-import { useSafeAreaInsets } from 'react-native-safe-area-context';
+import {useSafeAreaInsets} from 'react-native-safe-area-context';
 
-import { sharedClamp, sharedMax, sharedMin } from './math';
+import {sharedClamp, sharedMax, sharedMin} from './math';
 
 /**
  * Interpolate number
@@ -30,7 +30,6 @@ export const useInterpolate = (
   input: number[],
   output: number[],
   type?: ExtrapolationType,
-  // eslint-disable-next-line max-params
 ) => useDerivedValue(() => interpolate(progress.value, input, output, type));
 
 /**
@@ -41,7 +40,6 @@ export const useInterpolateColor = (
   input: number[],
   output: string[],
   colorSpace?: 'RGB' | 'HSV' | undefined,
-  // eslint-disable-next-line max-params
 ) => {
   'worklet';
 
@@ -108,9 +106,9 @@ export const useMax = (...args: SharedValue<number>[]) => {
 export function useInsideView<T extends Component>(
   wrapHeight: number | undefined = undefined,
 ): [React.RefObject<T>, SharedValue<boolean>] {
-  const { height } = useWindowDimensions();
+  const {height} = useWindowDimensions();
 
-  const { top } = useSafeAreaInsets();
+  const {top} = useSafeAreaInsets();
 
   const ref = useAnimatedRef<T>();
 
@@ -149,7 +147,7 @@ type Vector = {
 /**
  * Create Animated Shared Value Vector
  */
-export const useVector = ({ x, y }: Vector) => {
+export const useVector = ({x, y}: Vector) => {
   const ox = useSharedValue(x);
 
   const oy = useSharedValue(y);

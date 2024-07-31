@@ -4320,6 +4320,7 @@ __metadata:
     react-i18next: 11.18.6
     react-native: 0.74.3
     react-native-animateable-text: ^0.12.1
+    react-native-blob-util: ^0.19.11
     react-native-bootsplash: 5.4.1
     react-native-gesture-handler: ~2.16.1
     react-native-keyboard-controller: ^1.12.7
@@ -4783,6 +4784,13 @@ __metadata:
   dependencies:
     streamx: ^2.18.0
   checksum: d0c0a58de9d0d0bf0a66c71593f42b74fe3a41d13b63a65f9662a8fe11eda3b0166d9bedcb36e6dbbbfe67a70c8d2929db9c2f054b47e749bdc8a135c35fcb43
+  languageName: node
+  linkType: hard
+
+"base-64@npm:0.1.0":
+  version: 0.1.0
+  resolution: "base-64@npm:0.1.0"
+  checksum: 5a42938f82372ab5392cbacc85a5a78115cbbd9dbef9f7540fa47d78763a3a8bd7d598475f0d92341f66285afd377509851a9bb5c67bbecb89686e9255d5b3eb
   languageName: node
   linkType: hard
 
@@ -11206,6 +11214,19 @@ __metadata:
     react-native: ">=0.64.0-rc.3"
     react-native-reanimated: "*"
   checksum: c9cec46ada28aefd63e38fe18a8a7dbc86970fef4d4da46baee98b1d10f6d703f49727f3998fb945e8391cb9f66b8257430ee37cbb3601f7accc7af15013c4fd
+  languageName: node
+  linkType: hard
+
+"react-native-blob-util@npm:^0.19.11":
+  version: 0.19.11
+  resolution: "react-native-blob-util@npm:0.19.11"
+  dependencies:
+    base-64: 0.1.0
+    glob: ^10.3.10
+  peerDependencies:
+    react: "*"
+    react-native: "*"
+  checksum: 13f18e4fdca5b93236f309734aad625164c6fb5bf7191d1dc2fe4fdb385961c6802418968026fb2012ad01bda0ac092dbbcf3639d1efcd4a6361064d5b6957d0
   languageName: node
   linkType: hard
 

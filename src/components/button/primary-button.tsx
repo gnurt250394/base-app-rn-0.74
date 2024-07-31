@@ -74,7 +74,6 @@ export const PrimaryButton = ({
         // @ts-ignore
         style={[styles[size], containerStyle]}>
         {leftIcon ? <Icon colorTheme={iconColor} icon={leftIcon} /> : null}
-        {}
         {/* @ts-ignore */}
         <Text style={[styles[`text_${size}`], styles.textColor(disabled)]}>
           {t18n ? t(t18n) : text}

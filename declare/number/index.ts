@@ -41,3 +41,10 @@ Number.prototype.toStringKMG = function () {
 
   return Math.floor(actualNumber * 10) / 10 + abbreviations[index];
 };
+
+Number.prototype.formatPrice = function () {
+  return this.toFixed(2)
+    .replace(/(\d)(?=(\d{3})+\.)/g, '$1,')
+    .replace('.00', '')
+    .replace(/,/g, '.');
+};

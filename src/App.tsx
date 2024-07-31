@@ -1,4 +1,4 @@
-import React, {ReactNode, Suspense, useState} from 'react';
+import React, {ReactNode, Suspense, useEffect, useState} from 'react';
 import {StatusBar, StyleSheet} from 'react-native';
 
 import {I18nextProvider} from 'react-i18next';
@@ -9,7 +9,6 @@ import {Provider} from 'react-redux';
 import {PersistGate} from 'redux-persist/integration/react';
 
 import {PortalProvider} from '@gorhom/portal';
-import {useDidMount} from '@hooks';
 import {AppContainer} from '@navigation/app-navigation';
 import {persistore, store} from '@store/store';
 import {useLoadFont} from '@theme/typography';
@@ -27,11 +26,11 @@ const KeyboardProvider = ({children}: {children?: ReactNode}) => {
   const [loading, setLoading] = useState<boolean>(true);
 
   // effect
-  useDidMount(() => {
+  useEffect(() => {
     queueMicrotask(() => {
       setLoading(false);
     });
-  });
+  }, []);
 
   // render
   return (

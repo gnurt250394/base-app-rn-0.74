@@ -1,4 +1,4 @@
-import React, {useRef, useState} from 'react';
+import React, {useRef} from 'react';
 import {
   StatusBar,
   StyleSheet,
@@ -7,12 +7,10 @@ import {
 } from 'react-native';
 
 import {
-  runOnJS,
   useAnimatedProps,
   useAnimatedStyle,
   useDerivedValue,
   useSharedValue,
-  withTiming,
 } from 'react-native-reanimated';
 import {UnistylesRuntime} from 'react-native-unistyles';
 
@@ -30,15 +28,10 @@ import {
   Circle,
   Image,
   ImageShader,
-  makeImageFromView,
   SkImage,
 } from '@shopify/react-native-skia';
 import {createStyleSheet, useStyles} from '@theme';
 import {translate} from '@assets/i18n/translate';
-import {showSnack} from '@components/snack-bar';
-import {usePortal} from '@gorhom/portal';
-import {Modal} from '@components/modal';
-import {usePortalState} from '@gorhom/portal/src/hooks/usePortalState';
 
 const wait = (ms: number) => {
   return new Promise(resolve => {
@@ -69,6 +62,7 @@ export const Login = () => {
     );
   };
   const handleChangeTheme = async () => {
+    console.log('=>(index.tsx:69) handleChangeTheme', handleChangeTheme);
     UnistylesRuntime.setTheme(
       UnistylesRuntime.themeName !== 'dark' ? 'dark' : 'light',
     );
@@ -141,7 +135,11 @@ export const Login = () => {
               text="Button change theme"
             />
             <PrimaryButton disabled text="Button" />
-            <PrimaryButton leftIcon="chevron_left" text="Button" />
+            <PrimaryButton
+              leftIcon="chevron_left"
+              rightIcon="chevron_right"
+              text="Button"
+            />
             <PrimaryButton disabled leftIcon="chevron_left" text="Button" />
             <PrimaryButton rightIcon="chevron_left" text="Button" />
             <PrimaryButton disabled rightIcon="chevron_left" text="Button" />

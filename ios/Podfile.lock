@@ -1063,6 +1063,8 @@ PODS:
     - React-debug
   - react-native-animateable-text (0.12.1):
     - React-Core
+  - react-native-blob-util (0.19.11):
+    - React-Core
   - react-native-keyboard-controller (1.12.7):
     - DoubleConversion
     - glog
@@ -1564,6 +1566,7 @@ DEPENDENCIES:
   - React-logger (from `../node_modules/react-native/ReactCommon/logger`)
   - React-Mapbuffer (from `../node_modules/react-native/ReactCommon`)
   - react-native-animateable-text (from `../node_modules/react-native-animateable-text`)
+  - react-native-blob-util (from `../node_modules/react-native-blob-util`)
   - react-native-keyboard-controller (from `../node_modules/react-native-keyboard-controller`)
   - react-native-keys (from `../node_modules/react-native-keys`)
   - react-native-mmkv (from `../node_modules/react-native-mmkv`)
@@ -1717,6 +1720,8 @@ EXTERNAL SOURCES:
     :path: "../node_modules/react-native/ReactCommon"
   react-native-animateable-text:
     :path: "../node_modules/react-native-animateable-text"
+  react-native-blob-util:
+    :path: "../node_modules/react-native-blob-util"
   react-native-keyboard-controller:
     :path: "../node_modules/react-native-keyboard-controller"
   react-native-keys:
@@ -1850,6 +1855,7 @@ SPEC CHECKSUMS:
   React-logger: fa92ba4d3a5d39ac450f59be2a3cec7b099f0304
   React-Mapbuffer: 9f68550e7c6839d01411ac8896aea5c868eff63a
   react-native-animateable-text: c95b74a78a13e416e6c4e8b012eea29e14913207
+  react-native-blob-util: 39a20f2ef11556d958dc4beb0aa07d1ef2690745
   react-native-keyboard-controller: 07a457e3a882f85591f98034e6fcc930df9a8865
   react-native-keys: 44ffc616d254cb5a514a2fab856273f4dd2758cc
   react-native-mmkv: 8c9a677e64a1ac89b0c6cf240feea528318b3074

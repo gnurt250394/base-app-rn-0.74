@@ -159,22 +159,16 @@ function useAsyncState<T>(
   return [state, _setState];
 }
 
-function useUnMount(callback: () => void) {
-  // eslint-disable-next-line react-hooks/exhaustive-deps
-  return useEffect(() => () => callback(), []);
-}
-
-function useDidMount(callback: () => void) {
-  // eslint-disable-next-line react-hooks/exhaustive-deps
-  return useEffect(callback, []);
-}
-
 function useForceUpdate() {
   const unloadingRef = useRef(false);
 
   const [forcedRenderCount, setForcedRenderCount] = useState(0);
 
-  useUnMount(() => (unloadingRef.current = true));
+  useEffect(() => {
+    return () => {
+      unloadingRef.current = true;
+    };
+  }, []);
 
   return useCallback(() => {
     !unloadingRef.current && setForcedRenderCount(forcedRenderCount + 1);
@@ -376,7 +370,6 @@ const useTranslation = <
 
 export {
   useAsyncState,
-  useDidMount,
   useDisableBackHandler,
   useDismissKeyboard,
   useErrorMessageTranslation,
@@ -389,5 +382,4 @@ export {
   usePrevious,
   useSetState,
   useTranslation,
-  useUnMount,
 };
