@@ -18,7 +18,7 @@
     </option>
   </component>
   <component name="Git.Settings">
-    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/template" />
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
@@ -65,6 +65,13 @@
       <recent name="$PROJECT_DIR$/src/assets/image/source" />
       <recent name="$PROJECT_DIR$/src" />
     </key>
+  </component>
+  <component name="RubyModuleManagerSettings">
+    <option name="blackListedRootsPaths">
+      <list>
+        <option value="$PROJECT_DIR$" />
+      </list>
+    </option>
   </component>
   <component name="RunManager">
     <configuration name="/Volumes/Data/project/app/test/app/android/app/build.gradle [prepare]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
@@ -114,6 +121,7 @@
       <workItem from="1722389482076" duration="713000" />
       <workItem from="1722431792729" duration="1146000" />
       <workItem from="1722433115646" duration="407000" />
+      <workItem from="1722433533264" duration="95000" />
     </task>
     <task id="LOCAL-00001" summary=".">
       <created>1722352822894</created>
@@ -143,7 +151,21 @@
       <option name="project" value="LOCAL" />
       <updated>1722431946193</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary=".">
+      <created>1722433556005</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1722433556005</updated>
+    </task>
+    <task id="LOCAL-00006" summary=".">
+      <created>1722433578558</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1722433578558</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
