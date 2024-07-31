@@ -1,4 +1,4 @@
-package com.app
+package com.helloworld
 import android.content.res.Configuration
 import expo.modules.ApplicationLifecycleDispatcher
 import expo.modules.ReactNativeHostWrapper

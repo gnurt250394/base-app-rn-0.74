@@ -5,8 +5,12 @@
   "private": true,
   "scripts": {
     "postinstall": "node ./scripts/setup.js",
-    "android": "expo run:android",
-    "ios": "expo run:ios",
+    "android": "npx react-native run-android --mode=developmentDebug --active-arch-only",
+    "ios": "npx react-native run-ios --mode=developmentDebug",
+    "android:staging": "npx react-native run-android --mode=stagingDebug --active-arch-only",
+    "ios:staging": "npx react-native run-ios --mode=stagingDebug",
+    "android:production": "npx react-native run-android --mode=productionDebug --active-arch-only",
+    "ios:production": "npx react-native run-ios --mode=productionDebug",
     "web": "npx expo start --web",
     "lint": "eslint  index.js ./scripts/*.js  ./src/** --ext .js,.ts,.tsx",
     "start": "npx react-native start --reset-cache",
@@ -15,14 +19,12 @@
     "type:check": "yarn tsc --noEmit --skipLibCheck",
     "app-icon": "npx rn-ml appicon -s src/assets/images/appicon.png",
     "app-icon:dev": "npx rn-ml appicon -s src/assets/images/appicon-dev.png -f dev -icn AppIcon-Dev",
-    "ios:notification:dev": "node ./scripts/ios.js push-notification env/dev.json ",
+    "ios:notification:dev": "node ./scripts/ios.js push-notification env/development.json ",
     "genimg": "node genimg src/assets/images --output src/assets/images.ts --name images",
     "android:report": "node scripts/android.js report",
     "android:hash": "node scripts/android.js hash",
     "android:gen-key": "node scripts/android.js keystore",
-    "ios:dev": "node scripts/ios.js run env/dev.json",
-    "android:dev": "node scripts/android.js run env/dev.json Debug",
-    "android:release": "node scripts/android.js run env/dev.json Release"
+    "android:release": "node scripts/android.js run env/development.json Release"
   },
   "dependencies": {
     "@expo/metro-runtime": "~3.2.1",

@@ -1,4 +1,4 @@
-package com.app
+package com.helloworld
 import expo.modules.ReactActivityDelegateWrapper
 
 import com.facebook.react.ReactActivity

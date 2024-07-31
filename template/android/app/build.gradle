@@ -4,9 +4,10 @@ apply plugin: "com.facebook.react"
 
 project.ext.keyFiles = [
         // Default key file when clean project
-        debug: 'env/dev.json',
-        dev  : 'env/dev.json',
-        prod : 'env/prod.json'
+        debug      : 'env/development.json',
+        development: 'env/development.json',
+        production : 'env/production.json',
+        staging    : 'env/staging.json'
 ]
 apply from: project(':react-native-keys').projectDir.getPath() + "/RNKeys.gradle"
 
@@ -86,14 +87,35 @@ android {
     ndkVersion rootProject.ext.ndkVersion
     buildToolsVersion rootProject.ext.buildToolsVersion
     compileSdk rootProject.ext.compileSdkVersion
+    flavorDimensions("default")
 
-    namespace "com.app"
+    productFlavors {
+        development { // Added this
+            dimension "default"
+            applicationIdSuffix ".development"
+            versionNameSuffix "-development"
+            resValue "string", "CodePushDeploymentKey", '""'
+        }
+        staging { // Added this
+            dimension "default"
+            applicationIdSuffix ".staging"
+            versionNameSuffix "-staging"
+            resValue "string", "CodePushDeploymentKey", '""'
+        }
+        production { // Added this
+            dimension "default"
+            resValue "string", "CodePushDeploymentKey", '""'
+        }
+    }
+
+    namespace "com.helloworld"
     defaultConfig {
         applicationId project.keys.get("BUNDLE_IDENTIFIER")
         minSdkVersion rootProject.ext.minSdkVersion
         targetSdkVersion rootProject.ext.targetSdkVersion
         versionCode project.keys.get("VERSION_CODE").toInteger()
         versionName project.keys.get("VERSION_NAME")
+        resValue "string", "build_config_package", "com.helloworld"
     }
     signingConfigs {
         debug {
@@ -102,17 +124,33 @@ android {
             keyAlias 'androiddebugkey'
             keyPassword 'android'
         }
+        release {
+            if (project.hasProperty('UPLOAD_STORE_FILE')) {
+                storeFile file(UPLOAD_STORE_FILE)
+                storePassword UPLOAD_STORE_PASSWORD
+                keyAlias UPLOAD_KEY_ALIAS
+                keyPassword UPLOAD_KEY_PASSWORD
+            }
+        }
     }
     buildTypes {
         debug {
             signingConfig signingConfigs.debug
+            matchingFallbacks = ['debug', 'release'] // Addded this
+            resValue "string", "CodePushDeploymentKey", '"AR90piB3-v6PFMlACIr3cL6SPS0GMGNzAjoD7"'
         }
         release {
             // Caution! In production, you need to generate your own keystore file.
             // see https://reactnative.dev/docs/signed-apk-android.
-            signingConfig signingConfigs.debug
+            signingConfig signingConfigs.release
             minifyEnabled enableProguardInReleaseBuilds
+            matchingFallbacks = ['release'] // Addded this
             proguardFiles getDefaultProguardFile("proguard-android.txt"), "proguard-rules.pro"
+        }
+    }
+    bundle {
+        language {
+            enableSplit = false
         }
     }
 }
